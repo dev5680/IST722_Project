@@ -1,0 +1,40 @@
+FudgeFlix:
+
+BP 1: Track (USA?) Regional Distribution of Rental-Only Plans — may lead to reallocation of warehouse(s) and distribution optimization
+
+ff_plans
+ff_account_titles
+
+FR: Weekly report by state indicating number of orders/qty
+BI: Regional Heatmap
+
+——————————
+
+BP 2: Track Regional Increase/Decreases in Rental-Only vs. Streaming-Only Plans — may lead to reallocation of expenditure on tech infrastructure, bandwidth, etc.
+
+ff_plans
+
+FR: Monthly report by state indicating increases/decreases in plan types
+
+——————————
+
+FudgeMart:
+
+BP 3: Track Employee Hiring and Length of Employment Duration — we aspire to have happy (!) full-time employees who are paid fairly, equally, and want to stay w/us
+
+fm_employees
+fm_jobtitles_lookup
+fm_departments_lookup
+fm_employee_timesheets
+
+FR: Monthly report by department, supervisor, full-time status, hire/term date
+
+——————————
+
+BP 4: Track Regional Distribution of Orders by Department — we may wish to increase products or entirely eliminate departments based on sales; also optimize warehouse resources/distribution
+
+fm_orders
+fm_products
+fm_departments_lookup
+
+FR: Daily report of products sold aggregated by department per USA region (group of USA states)

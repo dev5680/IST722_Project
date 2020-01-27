@@ -1,0 +1,48 @@
+FudgeFlix:
+
+BP 1: Track USA Regional Distribution of Rental-Only Plans — may lead to reallocation of warehouse(s) and distribution optimization
+
+ff_account_titles
+ff_plans
+
+FR: Weekly report by state indicating number of orders/qty
+FR w/BI Tie-In: Regional Heatmap
+
+——————————
+
+BP 2: Track Popularity of Cast/Actors, Directors, and Genre — may lead to reallocation of expenditure on certain movies, studios, movie groupings, etc. based on popularity
+
+ff_account_titles
+ff_cast
+ff_directors
+ff_genres
+ff_people
+ff_titles
+ff_title_genres
+
+FR: Weekly reports on movies, etc. viewed by Director, Genre, and Cast/Actors
+FR w/BI Tie-In: Analyze Combinations of Director, Genre, and Cast/Actors
+
+——————————
+
+FudgeMart:
+
+BP 3: Track Employee Hiring and Length of Employment Duration — we aspire to have happy (!) full-time employees who are paid fairly, equally, and want to stay w/us
+
+fm_employees
+fm_jobtitles_lookup
+fm_departments_lookup
+fm_employee_timesheets
+
+FR: Monthly report by department, supervisor, full-time status, hire/term date
+
+——————————
+
+BP 4: Track USA Regional Distribution of Orders by Department — we may wish to increase products or entirely eliminate departments based on sales; also optimize warehouse resources/distribution
+
+fm_orders
+fm_products
+fm_departments_lookup
+
+FR: Daily report of products sold aggregated by department per USA region (group of USA states)
+FR w/BI Tie-In: Regional Heatmap
