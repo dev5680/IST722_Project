@@ -110,22 +110,22 @@ alter table [dbo].[FactRecommendationPlan]
 insert into [dbo].[FactRecommendationPlan](
 	[CustomerKey],
 	[MovieKey],
+	[PlanKey],
 	[PlanID],
 	[MovieRuntime],
 	[YearsOld],
 	[PlanPrice],
-	[PlanKey],
 	[MonthsOpened]
 )
 
-select 
+select distinct
 	C.CustomerKey CustomerKey,
 	M.MovieKey MovieKey,
 	Pl.PlanID PlanID,
+	Pl.PlanKey PlanKey,
 	Stg.title_runtime MovieRuntime,
 	DATEDIFF(year, stg.account_opened_on, getdate()) YearsOld,
 	Stg.plan_price PlanPrice,
-	Pl.PlanKey PlanKey,
 	DATEDIFF(month, stg.account_opened_on, GETDATE()) MonthsOpened
 from 
 	[ist722_grblock_oa1_stage].[dbo].[StgFactRecommendationPlan] Stg
@@ -134,20 +134,7 @@ from
 	join [ist722_grblock_oa1_dw].[dbo].[DimMovie] M
 	on Stg.title_id = M.MovieID
 	join [ist722_grblock_oa1_dw].[dbo].[DimPlan] Pl
-	on Stg.plan_id = Pl.PlanID; --(4,2656,656 rows affected)
-
-	select count(*) from FactRecommendationPlan;
-
-	select top 50 * from FactRecommendationPlan;
-
-	select M.MovieName, COUNT(movieName) ctMovieName
-	from FactRecommendationPlan frc
-	join DimMovie M
-	on M.MovieKey = frc.MovieKey
-	group by m.MovieName
-
-
-
+	on Stg.plan_id = Pl.PlanID
 
 
 /*
